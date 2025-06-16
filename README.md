@@ -1,49 +1,38 @@
-# 🤖 Simulación de Red Neuronal Artificial – Compuerta Lógica OR
+# Red Neuronal Simple - Compuerta OR
 
-Este proyecto consiste en la construcción, entrenamiento y simulación de una **red neuronal artificial simple** (Perceptrón) para resolver un problema lógico básico: la **compuerta OR**.
+Un archivo Python que simula cómo funciona una neurona artificial básica (perceptrón) aprendiendo a resolver la función lógica OR.
 
-## 📘 Objetivo
+## ¿De qué se trata?
 
-Comprender los fundamentos del funcionamiento de una red neuronal artificial a través de la implementación paso a paso de un perceptrón, aplicando conceptos clave como:
+Este script es una introducción práctica al mundo de las redes neuronales. Implementa desde cero un perceptrón simple que aprende por sí mismo a comportarse como una compuerta OR, mostrando de manera clara y visual:
 
-- Entradas, pesos y bias.
-- Función de activación (escalón).
-- Regla de aprendizaje (Perceptrón).
-- Entrenamiento supervisado de la red.
+- Cómo una neurona artificial procesa la información  
+- El fascinante proceso de aprendizaje automático paso a paso  
+- Cómo se van ajustando los pesos y el sesgo (bias) durante el entrenamiento  
+- La magia de ver cómo la máquina "aprende" de sus errores  
 
----
+## El desafío: Tabla de verdad OR
 
-## 🛠 Tecnologías utilizadas
+La red debe aprender esta lógica:
 
-- **Python 3**
-- **NumPy** para operaciones matriciales básicas
+| Entrada 1 | Entrada 2 | ¿Qué debería salir? |
+|-----------|-----------|---------------------|
+| 0         | 0         | 0                   |
+| 0         | 1         | 1                   |
+| 1         | 0         | 1                   |
+| 1         | 1         | 1                   |
 
----
+## Cómo aprende la neurona
 
-## 🧠 Lógica del Perceptrón
+El perceptrón empieza "en blanco" (pesos y bias en cero) y va aprendiendo mediante:
 
-Se simula el comportamiento de un perceptrón para aprender la tabla OR:
+- **Pesos iniciales**: 0, 0 (no sabe nada al principio)  
+- **Bias inicial**: 0  
+- **Velocidad de aprendizaje**: 1 (aprende rápido)  
+- **Función de decisión**: Escalón (si la suma es positiva → 1, sino → 0)  
+- **Regla de corrección**: Cuando se equivoca, ajusta los pesos según la fórmula del perceptrón  
 
-| X1 | X2 | Y (esperado) |
-|----|----|--------------|
-| 0  | 0  | 0            |
-| 0  | 1  | 1            |
-| 1  | 0  | 1            |
-| 1  | 1  | 1            |
+## Tecnología
 
-El perceptrón usa:
-- Pesos iniciales en 0.
-- Bias inicial en 0.
-- Tasa de aprendizaje: 1.
-- Función de activación: Escalón (Step Function).
-- Ajustes según la **regla del perceptrón**:
-  \[
-  \Delta w_i = \alpha (Y_d - Y) X_i \quad,\quad \Delta b = \alpha (Y_d - Y)
-  \]
-
----
-
-## 🚀 Ejecución del código
-
-```bash
-python perceptron_or.py
+- **Python 3** – El lenguaje base  
+- **NumPy** – Para las operaciones matemáticas básicas  
